@@ -7,33 +7,53 @@ __pycache__/
 dist/
 build/
 
-# Virtual environment
+# Virtual environment — never commit this
 .venv/
 venv/
 env/
+ENV/
 
-# Jupyter
+# Jupyter checkpoints
 .ipynb_checkpoints/
-*.ipynb_checkpoints
+*/.ipynb_checkpoints/
 
-# Generated data — do not commit mock CSVs or reports
+# Generated data — run generate_mock_data.py locally to recreate
 data/mock/*.csv
-data/curate/
 data/raw/
+data/curate/
 
-# Ollama / model files
+# Ollama model files — download via: ollama pull qwen2.5:3b
 *.gguf
 *.bin
+*.safetensors
+~/.ollama/
+
+# Environment and secrets — never commit
+.env
+*.env
+.env.*
+config/secrets.py
+secrets.yaml
 
 # OS
 .DS_Store
+.DS_Store?
+._*
 Thumbs.db
+ehthumbs.db
 
 # IDE
 .vscode/settings.json
+.vscode/launch.json
 .idea/
+*.swp
+*.swo
 
-# Secrets — never commit
-.env
-*.env
-config/secrets.py
+# Logs
+*.log
+logs/
+
+# Coverage and test artifacts
+.coverage
+htmlcov/
+.pytest_cache/

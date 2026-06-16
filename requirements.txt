@@ -30,6 +30,7 @@ pure_eval==0.2.3
 Pygments==2.20.0
 python-dateutil==2.9.0.post0
 pyzmq==27.1.0
+RapidFuzz==3.14.5
 requests==2.34.2
 six==1.17.0
 stack-data==0.6.3
